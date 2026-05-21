@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# TeX
+.textmp/
+
+
 # Distribution / packaging
 .Python
 build/

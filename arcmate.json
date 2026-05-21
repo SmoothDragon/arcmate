@@ -1,0 +1,257 @@
+{ "text_cards":
+  [
+    {
+      "caption": "CASTLES FOR EVERYONE",
+      "description": "\\small Any two \\NoKing\\ pieces may castle. Move piece one two squares in a rectilinear direction, and piece two on the other side",
+      "origin": "C",
+      "genre": "+",
+      "quote": "I'm going to build castles from the rubble of your love. ---Freya Ridings",
+      "symbol": "\\NoKing"
+    },
+    {
+      "caption": "10x10 BOARD",
+      "description": "The legal playing area now surrounds the board.",
+      "origin": "I",
+      "genre": "T",
+      "quote": "I don't have anything against walls. You know what it is? I like open spaces. ---Dion Dublin",
+      "symbol": "\\inlinegraphics{10x10}"
+    },
+    {
+      "caption": "EXTINCTION",
+      "description": "You lose if you lose all of any piece.",
+      "origin": "I",
+      "genre": "T",
+      "quote": "Extinction is the rule. Survival is the exception. ---Carl Sagan",
+      "symbol": "\\ding{72}"
+    },
+    {
+      "caption": "MICRO-MANAGER",
+      "description": "Pieces more than one rank in front of the King may not attack.",
+      "origin": "C",
+      "genre": "T",
+      "quote": "\\small I know it was your idea, but it was my idea to use your idea. --Anonymous",
+      "symbol": "\\All"
+    },
+    {
+      "caption": "WAR AND PEACE",
+      "description": "You may take a move and attack action with different pieces.",
+      "origin": "C",
+      "genre":"+",
+      "quote": "Only the dead have seen the end of war. --Plato",
+      "symbol": "\\All"
+    },
+    {
+      "caption": "POSSESSION",
+      "description": "Non-pawn pieces protected by a {\\KI} may also move/take like a {\\KI}.",
+      "origin": "C",
+      "genre": "+",
+      "quote": "An object in possession seldom retains the same charm that it had in pursuit. --Pliny the Elder",
+      "symbol": "\\KI"
+    },
+    {
+      "caption": "KNIGHT SWAP",
+      "description": "Two friendly \\NoKing\\ pieces which are a knight move apart may swap places.",
+      "origin": "C",
+      "genre": "+",
+      "quote": "Don't swap horses in crossing a stream. --Abraham Lincoln",
+      "symbol": "\\NoKing"
+    },
+    {
+      "caption": "TELEPORTER",
+      "description": "\\KI\\ may move to any open square adjacent to a friendly pawn.",
+      "origin": "C",
+      "genre": "+",
+      "quote": "If I could teleport, I'd probably still be late. --Anonymous",
+      "symbol": "\\KI"
+    },
+    {
+      "caption": "ATTACK SWAP",
+      "description": "\\KI\\ and \\KII\\ move the same, but attack like the other.",
+      "origin": "C",
+      "genre": "\\diff",
+      "quote": "The human race has one really effective weapon, and that is laughter. ---Mark Twain",
+      "symbol": "\\KI\\KII"
+    },
+    {
+      "caption": "ROYAL REVERSE",
+      "description": "\\KI\\ may move and take backwards like a \\Queen.",
+      "origin": "C",
+      "genre": "+",
+      "quote": "To the royal guards of this realm, we are all victims in-waiting. ---Cheshire Cat",
+      "symbol": "\\KI"
+    },
+    {
+      "bottomcaption": "Q m,x N+K",
+      "caption": "SUMMONER",
+      "description": "\\KI\\ may summon a friendly \\NoKing\\ to an adjacent square",
+      "quote": "My name is Mortimer Alexander and I am a licensed summoner.\" \"Darn. I'd hoped you were the pizza delivery guy. ---Jana Oliver",
+      "origin": "C",
+      "genre": "+",
+      "symbol": "\\KI"
+    },
+    {
+      "caption": "CYLINDER $\\Rightarrow$",
+      "description": "The right and left side of the board are adjacent to each other. Pieces may not move left from their POV.",
+      "origin": "C",
+      "genre": "-",
+      "quote": "Always choose the right path and speak the truth. ---Mahatma Gandhi",
+      "symbol": "\\inlinegraphics{cylinder}"
+    },
+    {
+      "caption": "TRADING PLACES",
+      "description": "You may swap the locations of a friendly \\KI\\ and \\KII\\ for your turn.", 
+      "origin": "C",
+      "genre": "+",
+      "quote": "You'll all be very, very sorry. ---Louis Winthorpe",
+      "symbol": "\\KI\\KII"
+    },
+    {
+      "caption": "COMPLICATE",
+      "description": "Deal two more cards.",
+      "origin": "C",
+      "genre": "$\\varnothing$",
+      "quote": "When all else fails, complicate matters. ---Aaron Allston",
+      "symbol": "++"
+    },
+    {
+      "caption": "FAST PAWNS",
+      "description": "Pawns capture normally, but may move any number of squares forward. Draw another card.",
+      "origin": "I",
+      "genre": "+",
+      "quote": " In ceremonies of the horsemen, even the pawn must hold a grudge. ---Bob Dylan",
+      "symbol": "\\Pawn+"
+    },
+    {
+      "caption": "LEND ME YOUR HORSE",
+      "description": "Non-pawn pieces protected by a knight may also move/take like a knight.",
+      "origin": "C",
+      "genre": "+",
+      "quote": "\"You should know better than to mount another's war-horse\", I said with a smirk. ---Jessica Leake",
+      "symbol": "\\Knight"
+    },
+    {
+      "caption": "MOVE TWICE",
+      "description": "Move two different pieces, or any take other action once.",
+      "origin": "I",
+      "genre": "+",
+      "quote": "When someone says you can't do something, do it twice and take pictures. ---Anonymous",
+      "symbol": "\\All"
+    },
+    {
+      "caption": "TAKE TWICE",
+      "description": "Take with two different pieces, or take any other action once.",
+      "quote": "As long as I breathe, I attack. ---Bernaud Hinault",
+      "origin": "C",
+      "genre": "+",
+      "symbol": "\\All"
+    },
+    {
+      "caption": "BRIBE",
+      "description": "On your turn you can do an action by an enemy pawn instead.",
+      "quote": "Never underestimate the effectiveness of a straight cash bribe. ---Claud Cockburn",
+      "origin": "C",
+      "genre": "+",
+      "symbol": "\\Pawn+"
+    },
+    {
+      "caption": "CHECKERS",
+      "description": "Pawns move and take like checkers.",
+      "quote": "These guys are playing checkers. I'm out here playing chess. When they figure it out, it's too late. ---Max Holloway",
+      "genre": "\\diff",
+      "origin": "C",
+      "symbol": "\\Pawn"
+    },
+    {
+      "caption": "PRECOCIOUS PAWNS",
+      "description": "Pawns start advanced one rank. Draw another card.",
+      "origin": "I",
+      "genre": "-",
+      "quote": "Precocious was not the same as smart, much less the same as wise, and the perfect opposite of informed. ---Lionel Shriver",
+      "symbol": "\\Pawn+"
+    },
+    {
+      "caption": "NIGHT KING QUEEN",
+      "description": "Queens move and take like Knight+King.",
+      "description": "\\Sym\\Queen\\Move: (\\Knight+\\King)\\Move\\newline\\Sym\\Queen\\Attack: (\\Knight+\\King)\\Attack", 
+      "origin": "C",
+      "genre":"\\diff",
+      "quote": "Night's King was only a man by light of day, Old Nan would always say, but the night was his to rule. ---Brandon Stark",
+      "symbol": "\\Queen"
+    },
+    {
+      "caption": "CROWNED",
+      "description": "\\Sym\\KI$\\Move^+$: \\King\\Move\\newline\\Sym\\KI$\\Attack^+$: \\King\\Attack",
+      "origin": "C",
+      "genre":"+",
+      "quote": "In the land of the blind the one-eyed man is king. ---Efren Ramirez",
+      "symbol": "\\KI"
+    },
+    {
+      "caption": "REARGUARD",
+      "description": "Whenever a Queen moves (not drop), it may summon a pawn to the square behind it.",
+      "origin": "C",
+      "genre":"+",
+      "quote": "If you think you're going to be a backup, you're going to be a backup. ---Nick Foles",
+      "symbol": "\\Queen"
+    },
+    {
+      "caption": "INSANE CYLINDER",
+      "description": "Pieces do not move/take backwards. The top and bottom of the board are considered adjacent.",
+      "origin": "I",
+      "genre": "-",
+      "quote": "There's a fine line between genius and insanity. I have erased this line. ---Oscar Levant",
+      "symbol": "\\rotatebox{-90}{\\inlinegraphics{cylinder}}"
+    },
+    {
+      "caption": "CYLINDER",
+      "description": "Pieces may move as if the right and left side of the board are adjacent to each other.",
+      "origin": "I",
+      "genre": "+",
+      "quote": "\\tiny Everything in nature takes its form from the sphere, the cone and the cylinder. ---Paul Cezanne",
+      "symbol": "\\inlinegraphics{cylinder}"
+    },
+    {
+      "caption": "MOVE SWAP",
+      "description": "Two friendly {\\Sym\\NoKing} may swap places if one can move to or take the other.",
+      "origin": "C",
+      "genre": "+",
+      "quote": "Trading is very competitive and you have to be able to handle getting your butt kicked. ---Paul Tudor Jones",
+      "symbol": "\\NoKing"
+    },
+    {
+      "caption": "ALL PASSANT",
+      "description": "Any piece may capture any piece en passant.",
+      "origin": "C",
+      "genre": "+",
+      "quote": "You never advance without losing something en passant, and you lose it because you're paying so much attention to the new thing. ---Ninette de Valois",
+      "symbol": "\\ding{72}"
+    },
+    {
+      "caption": "MOVE THROUGH FRIENDLY PIECES",
+      "description": "Friendly pieces do not block movement.",
+      "origin": "C",
+      "genre": "+",
+      "quote": "True friends stab you in the front. ---Oscar Wilde",
+      "symbol": "\\ding{72}"
+    },
+    {
+      "caption": "ARCHBISHOP",
+      "description": "Queens move and take like Bishop+Knight. Fairy chess Archbishop.",
+      "origin": "F",
+      "genre": "\\diff",
+      "quote": "If people want a sense of purpose they should get it from their archbishop. They should certainly not get it from their politicians. ---Harold MacMillan",
+      "symbol": "\\Queen"
+    },
+    {
+      "caption": "CHANCELLOR",
+      "description": "Queens move and take like Rook+Knight. Fairy chess Chancellor.",
+      "origin": "F",
+      "genre": "\\diff",
+      "quote": "When I'm stirring a saucepan, I don't say to myself, 'Now the chancellor is stirring a saucepan'. ---Angela Merkel",
+      "symbol": "\\Queen"
+    }
+  ],
+  "graphic_cards":[
+  ]
+}
+
