@@ -66,7 +66,7 @@
     },
     {
       "caption": "TEN BY TEN",
-      "description": "The board is 10x10 and the pieces start in the central 8x8 squares. Pawns still promote at the same rank in the central 8x8 square.",
+      "description": "The board is 10x10 and the pieces start in the central 8x8 squares. A \\Pawn\\ promotes on rank 9 (ranks numbered 1--10).",
       "origin": "I",
       "genre": "T",
       "quote": "I don't have anything against walls. You know what it is? I like open spaces. ---Dion Dublin",
@@ -82,7 +82,7 @@
     },
     {
       "caption": "WAR AND PEACE",
-      "description": "You may make one move and one capture with two different pieces as one action.",
+      "description": "You may make one move and one capture with two different pieces as one action. Castling is a \\King\\ move. Say when your turn is over.",
       "origin": "C",
       "genre":"+",
       "quote": "Only the dead have seen the end of war. --Plato",
@@ -107,7 +107,7 @@
     {
       "bottomcaption": "Q m,x N+K",
       "caption": "SUMMONER",
-      "description": "A \\Bishop\\ may move a friendly \\NoKing\\ to an adjacent square next to it as an action.",
+      "description": "A \\Bishop\\ may make a summoner action: move a friendly \\NoKing\\ to an adjacent square, or capture. A \\Pawn\\ may not be summoned to the first or last rank.",
       "quote": "My name is Mortimer Alexander and I am a licensed summoner.\" \"Darn. I'd hoped you were the pizza delivery guy. ---Jana Oliver",
       "origin": "C",
       "genre": "+",
@@ -154,8 +154,16 @@
       "symbol": "\\Knight\\NoPawn"
     },
     {
+      "caption": "POSSESSION",
+      "description": "A non-pawn piece protected by a \\Knight\\ may act like that \\Knight\\ (it is not the possessor). Kings cannot be possessed.",
+      "origin": "C",
+      "genre": "+",
+      "quote": "Possession is nine-tenths of the law. ---Anonymous",
+      "symbol": "\\Knight\\NoPawn"
+    },
+    {
       "caption": "MOVE TWICE",
-      "description": "You may make two moves with two different pieces as one action.",
+      "description": "You may make two moves with two different pieces as one action. White may not use this card on move 1. Castling is a \\King\\ move.",
       "origin": "I",
       "genre": "+",
       "quote": "When someone says you can't do something, do it twice and take pictures. ---Anonymous",

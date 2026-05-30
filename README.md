@@ -1,7 +1,7 @@
 # ArcMate
 A deck of alternate chess rules. Deal one of two cards. Designed to work with Fischer Random Bughouse.
 
-**Docs:** [PLAN.md](PLAN.md) · [RULEBOOK.md](RULEBOOK.md) · [GLOSSARY.md](GLOSSARY.md) · [QUICKREF.md](QUICKREF.md) · [Card list](docs/CARD_LIST.md) · Design notes: [arcmate.txt](arcmate.txt)
+**Docs:** [PLAN.md](PLAN.md) · [RULEBOOK.md](RULEBOOK.md) · [GLOSSARY.md](GLOSSARY.md) · [QUICKREF.md](QUICKREF.md) · [Card list](docs/CARD_LIST.md) · [Playtest ratings](docs/PLAYTEST.md) · Design notes: [arcmate.txt](arcmate.txt)
 
 # How to make
 Print out PDF file to make cards.
@@ -15,9 +15,10 @@ Have fun playing!
 ![ArcMate](https://github.com/SmoothDragon/arcmate/blob/main/arcmate.png)
 
 # Master rules
-- Rules refer to how a piece currently moves/takes/acts, given the application of previous rules. "Orthodox piece" refers the original piece.
+- Rules refer to how a piece currently moves/captures/acts, given the application of previous rules. "Orthodox piece" refers the original piece.
+- **No check:** you win if the opponent has no king at the end of your turn (see [RULEBOOK.md](RULEBOOK.md)).
 - The "+" indicates extra cards to be drawn. (Optional) Only the first "+" card seen draws additional cards.
-- Any piece "moving as a pawn", may be taken en passant.
+- Any piece "moving as a pawn", may be captured en passant.
 
 # Fisher 960 from dice roll of d8, d12, d20
 - d8 places Q on position 1-8

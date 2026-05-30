@@ -16,7 +16,9 @@
 ## Your turn
 
 - Usually **one action**: one **move** OR one **capture**.
-- Some cards: **two** moves, **two** captures, or **one move + one capture** = **one turn**.
+- Some cards: **two** moves, **two** captures, or **one move + one capture** = **one turn** → say **“done”** when finished.
+- **No check.** You **win** if opponent has **no king** at end of your turn; you **lose** if you have no king.
+- **Move Twice:** White **not** on move 1. **Castling** = **king** move.
 - Use **move / capture / act** — not “take” or “attack.”
 
 ---
@@ -59,4 +61,4 @@ Same dealt cards on both boards unless agreed. Partner passes captures as usual.
 
 ---
 
-*Card list & rewrites: [docs/CARD_LIST.md](docs/CARD_LIST.md)*
+*Pawns: no rank behind start; 10×10 promotes on rank 9. Ratings: [docs/PLAYTEST.md](docs/PLAYTEST.md)*

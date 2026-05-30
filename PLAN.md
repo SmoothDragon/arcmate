@@ -137,16 +137,19 @@ Dimensions are **almost the same** as Magic (63×88 mm). The real work is **vend
 - Start from **[ChessRuleCards](https://github.com/SmoothDragon/ChessRuleCards)** (superset).
 - Current **`arcmate.json`** is an early subset (32 cards); several names differ from the Sheet (e.g. “Attack swap” vs `CAPTURE SWAP`).
 
-### Selection criteria (use Sheet rubric + add these)
+### Selection criteria (use Sheet rubric + playtest)
 
 | Criterion | Target for SDCC |
 |-----------|-------------------|
+| **Playtest score** | Prefer **4–5/5** from [docs/PLAYTEST.md](docs/PLAYTEST.md); cut **3/5** “degenerate to chess” (e.g. Teleporter) |
 | **Teachable in <2 min** | Prefer cards that need no extra tokens |
 | **Composable** | Cards stack via “current rules” model (README master rules) |
 | **Bughouse-safe** | Avoid rules that break two-board timing unless tested |
 | **No adjudication hell** | Deprioritize “No legality check” = fail in Sheet |
 | **1v1 stall** | Deprioritize rules that increase draws in single-board chess |
-| **Balance** | Mix `origin` (C/I/F), `genre` (+, T, diff, -) across each 27 |
+| **Balance** | Mix `origin` (C/I/F), `genre` (+, T, diff, -) across each 27; note **Cylinder** White edge |
+
+**Adam & Jay-C Tier A (5/5) for Origins:** Ghost, Move twice, Insane cylinder, Micro-manager, Cylinder. **Tier B (4/5):** Capture twice, War and Peace, Summoner, Precocious pawns, Possession. **Tier C:** Teleporter → expansion or cut.
 
 ### Playtest protocol
 
@@ -157,7 +160,8 @@ Dimensions are **almost the same** as Magic (63×88 mm). The real work is **vend
 
 ### Deliverable
 
-`docs/CARD_LIST.md` (or Sheet tab) with final **Origins 27** and **Expansion 27**, each row linking to ChessRuleCards commit/line.
+- [docs/PLAYTEST.md](docs/PLAYTEST.md) — session notes + inclusion tiers (started).
+- [docs/CARD_LIST.md](docs/CARD_LIST.md) + Sheet tab with final **Origins 27** and **Expansion 27**.
 
 ---
 
@@ -183,10 +187,12 @@ Dimensions are **almost the same** as Magic (63×88 mm). The real work is **vend
 
 ### Ambiguity pass (before print)
 
-- [ ] Every card: **trigger**, **duration** (rest of game vs one turn), **who chooses** targets.
-- [ ] Fix duplicate/wrong fields in JSON (e.g. `CROWNED` has two `description` keys — keep one).
+- [x] **Win condition:** no check; king presence at end of turn ([PLAYTEST.md](docs/PLAYTEST.md) → [RULEBOOK.md](RULEBOOK.md) v0.2).
+- [ ] **Global pawn rules** on cards + rulebook (min rank, 10×10 → rank 9, summoner limits).
+- [ ] **Ghost** interactions: castling, pawn capture, en passant.
+- [ ] Every card: **trigger**, **duration**, **who chooses** targets.
 - [ ] Rules that need **extra equipment** (10×10 board, cylinder diagram): include **setup diagram** on card or ban for Origins.
-- [ ] Document **interaction priority** when two cards conflict (order dealt = order applied unless rulebook says otherwise).
+- [ ] **Compound turns:** “turn over” + Move Twice White move-1 ban on [QUICKREF.md](QUICKREF.md).
 
 ---
 
@@ -225,8 +231,10 @@ From [`COMIC_CON_SUBMISSION.md`](COMIC_CON_SUBMISSION.md) — operational checkl
 ### P0 (before print order)
 
 - [ ] Resize / export path for **poker** + vendor upload
-- [ ] Finalize **27+27** list; trim `arcmate.json` to match
-- [x] `GLOSSARY.md` + `RULEBOOK.md` v0.1 + `QUICKREF.md` + `docs/CARD_LIST.md` (draft; align JSON to glossary)
+- [ ] Finalize **27+27** from [PLAYTEST.md](docs/PLAYTEST.md) tiers + untested card passes
+- [x] `GLOSSARY.md` + `RULEBOOK.md` v0.2 + `QUICKREF.md` + `docs/CARD_LIST.md` + `docs/PLAYTEST.md`
+- [x] Patch JSON: Summoner, Ten By Ten, Move Twice, War and Peace; add Possession
+- [ ] Cut/move Teleporter; distinguish Possession vs Lend Me Your Horse
 - [ ] Spreadsheet ↔ JSON **export** script; agree hybrid workflow with group
 - [ ] Cover art in repo; wire backs into print export
 - [ ] Proof deck ordered

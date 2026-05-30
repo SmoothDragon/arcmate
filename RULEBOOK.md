@@ -1,6 +1,6 @@
-# ArcMate rulebook (draft v0.1)
+# ArcMate rulebook (draft v0.2)
 
-Chess with a deck of rule-modifying cards. For definitions see [GLOSSARY.md](GLOSSARY.md). For a one-page teach sheet see [QUICKREF.md](QUICKREF.md). Card inventory and wording status: [docs/CARD_LIST.md](docs/CARD_LIST.md).
+Chess with a deck of rule-modifying cards. For definitions see [GLOSSARY.md](GLOSSARY.md). For a one-page teach sheet see [QUICKREF.md](QUICKREF.md). Card inventory: [docs/CARD_LIST.md](docs/CARD_LIST.md). Playtest ratings: [docs/PLAYTEST.md](docs/PLAYTEST.md).
 
 ---
 
@@ -46,18 +46,40 @@ Play proceeds as in chess with these overrides:
 
 1. **Current rules:** All rules refer to how a piece **currently** may move, capture, and act, including all dealt cards in order.
 2. **Orthodox piece:** The **piece type** the physical piece had at the start of the game (before cards).
-3. **Your turn:** You normally make **one action** (one move or one capture), unless a card allows a **compound action** (e.g. move twice, war and peace).
-4. **Check and checkmate:** Use current king move/capture powers unless a card removes or alters them. If unclear, agree before the game or consult [docs/CARD_LIST.md](docs/CARD_LIST.md) notes.
-5. **Draws:** Standard chess draw rules unless a card changes them.
+3. **Your turn:** You normally make **one action** (one move or one capture), unless a card allows a **compound action** (e.g. Move Twice, Capture Twice, War and Peace).
+4. **Winning (no check):** ArcMate does **not** use check or checkmate ([playtest](docs/PLAYTEST.md)):
+   - At the **end of your turn**, if you **do not have a king**, you **lose**.
+   - Otherwise, at the **end of your turn**, if the opponent **does not have a king**, you **win**.
+5. **Draws:** Standard chess draw rules unless a card changes them (king capture ends the game before most draws matter).
 6. **En passant:** If a piece **moves like a pawn** (including along a multi-square path), en passant applies as in orthodox chess to that path, unless a card says otherwise (see Fast Pawns on the card list).
 
 ### 4.2 Compound actions
 
 Some cards let you make **two actions as one turn** (e.g. two moves, two captures, or one move and one capture). Both must be legal under **current** rules when you start the turn. You may use the same piece twice only if the card does not require **different** pieces and the first action does not make the second illegal.
 
-### 4.3 Card-specific setup
+- **Castling** counts as a **king move** (for Move Twice, War and Peace, and similar).
+- **Move Twice:** **White** may **not** use this card on **move 1** (before Black has moved).
+- **End of turn:** After a compound action, clearly signal **“turn over”** (tap clock, gesture, or say “done”) before the opponent acts.
+- **Capture Twice:** Treat the two captures as **two phases** in order; resolve the first fully before the second.
+
+### 4.3 Pawn rules (global)
+
+Unless a card says otherwise:
+
+1. A pawn may not occupy a rank **behind** its orthodox **starting rank** (no retreat past its start line).
+2. Card text that **summons**, **drops**, or **teleports** pawns must respect that limit on the card (e.g. Summoner: not to the first or last rank).
+3. On a **10×10** board ([Ten By Ten](docs/CARD_LIST.md)), a pawn **promotes on rank 9** (ranks numbered 1–10 from your side).
+
+### 4.4 Card-specific setup
 
 Cards that change the board or start position (Ten By Ten, Precocious Pawns, Checkers, etc.) apply **after** all dealt cards are known, during setup. See individual entries in [docs/CARD_LIST.md](docs/CARD_LIST.md).
+
+### 4.5 Ghost (move through friendly pieces)
+
+Friendly pieces do not block **movement** (not necessarily captures — confirm on card). Documented interactions to clarify in playtest:
+
+- **Castling** with pieces that move through friends.
+- **Pawn captures**, including **en passant**, through or past friendly pieces.
 
 ---
 
@@ -136,21 +158,23 @@ Wording on printed cards may lag this rulebook; **GLOSSARY.md** and [docs/CARD_L
 
 ## 11. Teaching script (60 seconds)
 
-> ArcMate is chess plus one or two rule cards. We deal them in order; later cards change rules on top of earlier ones. On your turn you usually make one move or capture, unless the cards say you can do two things. Words on the cards use our glossary: *move*, *capture*, *act* — not “take” or “attack.” If a card has a plus in the corner, we draw another rule card. Setup is normal chess unless a card says otherwise, like a bigger board or pawns moved forward. Questions on a specific card — read the card aloud and we apply the glossary.
+> ArcMate is chess plus one or two rule cards. We deal them in order; later cards stack. There is no check — you win if the opponent has no king at the end of your turn. Usually one move or capture per turn; some cards give two. Say “done” after a double action. Pawns have extra limits — see the rulebook. Plus in the corner means draw another card.
 
 ---
 
 ## Appendix A — Open rules questions
 
-Track answers here after playtests; several come from [`arcmate.txt`](arcmate.txt):
-
-| Topic | Question | Tentative direction |
-|-------|----------|---------------------|
-| Castles for everyone | Same **rank** only, or **file** too? | JSON allows rank **or** file |
-| Capture swap vs weapon swap | Same card or different? | Capture swap = generic; piece-pair swaps = specific weapon swaps |
-| Protection basis | Move-based vs capture-based? | Glossary uses capture-based until playtest says otherwise |
-| Penalty box / Possession | Not in JSON yet | See card list |
+| Topic | Status |
+|-------|--------|
+| Check / checkmate | **Resolved** — use king-presence win rule ([PLAYTEST.md](docs/PLAYTEST.md)) |
+| Ghost + castling / pawn capture | **Open** — pin down wording after next session |
+| Castles for everyone | Rank **or** file per card text |
+| War and Peace **rename** | Optional; title likely fine (public domain) but confusing — see playtest notes |
+| Cylinder **White advantage** | Balance test or demo disclaimer |
+| Teleporter | **Deprioritize** for Origins (degenerates to chess) |
+| Capture swap vs weapon swap | Capture swap = generic; named swaps = specific pairs |
+| Penalty box | Not playtested this session |
 
 ---
 
-*Draft v0.1 — align with `arcmate.txt` and spreadsheet before Comic-Con print.*
+*Draft v0.2 — reflects Adam & Jay-C playtest ([docs/PLAYTEST.md](docs/PLAYTEST.md)).*

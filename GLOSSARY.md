@@ -39,6 +39,21 @@ On cards and in [`symbols.tex`](symbols.tex), macros such as `\NoKing`, `\Bishop
 
 ---
 
+## Winning (ArcMate standard)
+
+ArcMate **does not use check**. After your turn ends:
+
+1. If you have **no king**, you **lose**.
+2. If the opponent has **no king**, you **win**.
+
+See [RULEBOOK.md](RULEBOOK.md) §4.1 and [docs/PLAYTEST.md](docs/PLAYTEST.md).
+
+## Pawn limits (global)
+
+- A pawn may not sit on a rank **behind** its orthodox starting rank.
+- **10×10:** promotion on **rank 9** (ranks 1–10 from your side).
+- Card-specific pawn teleports must repeat any stricter limit on the card.
+
 ## Actions, moves, and captures
 
 | Term | Definition |
