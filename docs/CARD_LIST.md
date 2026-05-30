@@ -1,6 +1,8 @@
 # ArcMate card list (prototype)
 
-Tracks each card’s **canonical id**, print status in [`arcmate.json`](../arcmate.json), and alignment with [`arcmate.txt`](../arcmate.txt). **Playtest ratings (Adam & Jay-C):** [PLAYTEST.md](PLAYTEST.md). Deck assignment (**Origins** / **Expansion**) is TBD until the [spreadsheet](https://docs.google.com/spreadsheets/d/1FEswgLlyckdUdkqBpFjGnMcEMd2lOh_IVsh94GkxTQg/edit?usp=sharing) is filled.
+Tracks each card’s **canonical id**, print status in [`arcmate.json`](../arcmate.json), and alignment with [`arcmate.txt`](../arcmate.txt). **Playtest ratings (Adam & Jay-C):** [PLAYTEST.md](PLAYTEST.md).
+
+**SDCC deck ([PLAN.md](../PLAN.md)):** **25** rule + **2** reference = **27** unique faces per Origins deck. **Manufacturer:** one **54-card** print = **two** identical Origins decks (27 + 27). Expansion is post-SDCC.
 
 ## Playtest inclusion (Adam & Jay-C)
 
@@ -106,15 +108,23 @@ From `arcmate.txt` — use concrete types on printed cards, not ①②:
 
 ---
 
-## SDCC deck selection (checklist)
+## Origins 25 + reference 2 (checklist)
 
-Use spreadsheet rubric columns (dynamic, intuitive, no tokens, etc.) plus:
+- [ ] Mark exactly **25** `text_cards` as `origins: true` in Sheet/JSON (10 rated A/B so far — 15 more from pool)
+- [ ] Lock **R1** (rules) and **R2** (960 dice) text in `reference_cards`
+- [ ] Cut **Teleporter**, **retreater**, weak duplicates to free slots
+- [ ] Decide **CYLINDER ⇒** vs two cylinders (only one may fit in 25)
+- [ ] `make` / print export: **27** unique faces + manifest for **54** upload slots (duplicate each face)
+- [ ] Lock **card 1–27 order** (same in both halves of the print)
 
-- [ ] Assign **Origins** vs **Expansion** (27+27 target)
-- [ ] Cut **retreater**, duplicate cylinders, or unclear swaps if over 27 per deck
-- [ ] Fix all **fix** rows before `make` / print export
-- [ ] Apply glossary pass to every **in json** row
-- [ ] Add **penalty box** / **possession** only if playtest slots allow
+### Reference cards (`reference_cards` in JSON)
+
+| Slot | caption | Status |
+|------|---------|--------|
+| **R1** | ARCMATE RULES | draft in JSON |
+| **R2** | FISCHER RANDOM 960 | draft in JSON |
+
+Not shuffled into the rule deck; kept aside or boxed as reference.
 
 ---
 

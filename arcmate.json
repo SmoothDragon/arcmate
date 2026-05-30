@@ -267,6 +267,26 @@
     }
   ],
   "graphic_cards":[
+  ],
+  "reference_cards": [
+    {
+      "slot": "R1",
+      "caption": "ARC MATE RULES",
+      "description": "Deal 1--2 rule cards in order; later cards stack. No check: at end of your turn, no king = you lose; opponent has no king = you win. One move or capture unless a card allows two (say ``done''). Pawns: not behind starting rank. ``+'' corner: draw another rule card.",
+      "origin": "R",
+      "genre": "REF",
+      "quote": "",
+      "symbol": "\\Board"
+    },
+    {
+      "slot": "R2",
+      "caption": "FISCHER RANDOM 960",
+      "description": "On rank 1: \\textbf{d8} = queen file (1--8). \\textbf{d12}: first bishop on non-queen color square (roll \\% 4, use 1--4); second bishop on queen color (roll \\% 3, use 1--3). \\textbf{d20}: first knight (roll \\% 5); second knight (roll \\% 4). Place king in center of last three squares; rooks on the other two. Mirror for Black.",
+      "origin": "R",
+      "genre": "REF",
+      "quote": "",
+      "symbol": "\\d8"
+    }
   ]
 }
 

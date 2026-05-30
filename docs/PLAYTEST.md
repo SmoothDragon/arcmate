@@ -116,7 +116,7 @@ No check, checkmate, or “must respond to check” phases. Captures and compoun
 
 ### 4. Degenerate-to-chess filter
 
-When cutting to 27+27, prefer cards rated **4+** that visibly alter play; demote **Teleporter**-style cards unless redesigned.
+When cutting to **Origins 25**, prefer cards rated **4+** that visibly alter play; demote **Teleporter**-style cards unless redesigned. Two deck slots are **reference** (rules + 960 dice), not rule cards.
 
 ---
 
@@ -134,7 +134,7 @@ Cards in [`arcmate.json`](../arcmate.json) not in this report still need ratings
 | P0 | Add **pawn global rules** to rulebook; patch Summoner, Ten By Ten, Rearguard cards | |
 | P0 | Document **Ghost** + castling + pawn capture in rulebook appendix | |
 | P1 | ~~Add **Possession** to `arcmate.json`~~ done; refine vs Lend Me Your Horse | |
-| P1 | **Cut or move** Teleporter to expansion; fill Origins from Tier A/B | |
+| P1 | **Cut or move** Teleporter; pick **15 more** rules to reach Origins **25** from Tier A/B + pool | |
 | P1 | War and Peace **rename** decision + “turn over” on quick-ref | |
 | P2 | Playtest **Cylinder** with Black-first or handicap | |
 | P2 | Rate remaining 32-card pool; sync [spreadsheet](https://docs.google.com/spreadsheets/d/1FEswgLlyckdUdkqBpFjGnMcEMd2lOh_IVsh94GkxTQg/edit?usp=sharing) | |

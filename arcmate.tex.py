@@ -175,6 +175,8 @@ def Magic_TikZ_card(card):
         card['quote'] = card['graphic']
     if genre == 'T':
         color = 'blue!40!white'
+    elif genre == 'REF':
+        color = 'gray!15!white'
     else:
         color = 'white'
     # CARD_DATA = [color, card['symbol'],card['caption'], card['description'], card['quote'], origin, genre]
@@ -230,6 +232,7 @@ if __name__ == '__main__':
         json_dict = json.load(infile)
     cards = json_dict['text_cards']
     gcards = json_dict['graphic_cards']
-    buildMagicTeX(cards)
+    ref_cards = json_dict.get('reference_cards', [])
+    buildMagicTeX(cards + ref_cards)
     # buildTeX(cards)
     # buildTeX(gcards)

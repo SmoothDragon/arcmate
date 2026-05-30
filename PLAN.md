@@ -16,27 +16,56 @@ Prototype goal: a **playable, teachable, professionally printed** deck of chess 
 
 ## 1. Product definition
 
-### What we are shipping for SDCC
+### SDCC goal: **ArcMate: Origins** (27 faces)
 
-| Item | Target |
-|------|--------|
-| **Base game** | **ArcMate: Origins** — 27 rule cards |
-| **Expansion** | **ArcMate: _[name TBD]_** — 27 rule cards |
-| **Physical product** | One **54-card poker deck** (cheapest path on [Your Playing Cards](https://yourplayingcards.com/): standard poker size, custom backs; customize faces per card in their deck builder) |
-| **Play modes** | Standard chess and **Fischer Random / bughouse** (per README and Comic-Con form) |
-| **Demo format** | 10–15 min games; rules taught on-site ([`COMIC_CON_SUBMISSION.md`](COMIC_CON_SUBMISSION.md)) |
+| Slot | Count | Purpose |
+|------|-------|---------|
+| **Rule cards** | **25** | Chess rule modifiers (curated from pool; see [PLAYTEST.md](docs/PLAYTEST.md)) |
+| **Reference cards** | **2** | Non-random “utility” faces — see below |
+| **Total per Origins deck** | **27** | 25 rules + R1 + R2 (reference cards not shuffled into the rule pile) |
+| **Expansion** | — | Post-SDCC; **not** in this print |
 
-### What “54 cards” really means
+**Play modes:** Standard chess, **Fischer Random 960** (dice setup on reference card), and bughouse for demos ([`COMIC_CON_SUBMISSION.md`](COMIC_CON_SUBMISSION.md)).
 
-Confirm with the printer how they count cards (52 + 2 jokers vs 54 distinct faces). Typical options:
+### Print plan: **one 54-card order = two Origins decks**
 
-| Slot | Suggested use | Decision needed |
-|------|---------------|-----------------|
-| 52 | Rule cards (26 Origins + 26 Expansion) | Or 27+27 and drop 2 slots |
-| 2 | Jokers / “draw 2” / reference | Or rule-summary cards |
-| **27 + 27** | Matches your split | **2 cards** must be non-rule (jokers, title card, quick-ref) **or** you print **56** and pay more — **decide by playtest week 2** |
+Use the manufacturer’s standard **54-card poker deck** SKU ([Your Playing Cards](https://yourplayingcards.com/) and similar vendors). **Do not** treat 54 as “one deck with leftovers” — it is **two complete copies** of the same 27-face product:
 
-**Recommendation:** Treat **52 faces as rules** (26 per box conceptually) and use **2 jokers** for “reshuffle / blank / ArcMate logo” so the printer’s 54-card SKU stays valid without wasting rule slots.
+```
+┌─────────────────────────────────────────────────────────────┐
+│  54-card print (single order, one box SKU)                  │
+├──────────────────────────┬──────────────────────────────────┤
+│  Cards 1–27              │  Cards 28–54                   │
+│  ArcMate: Origins #1     │  ArcMate: Origins #2 (duplicate)│
+│  25 rule + R1 + R2       │  same 27 faces again             │
+└──────────────────────────┴──────────────────────────────────┘
+```
+
+| Metric | Value |
+|--------|--------|
+| **Unique faces to design** | **27** (25 rule + 2 reference) |
+| **Faces per print upload** | **54** (each unique face assigned twice in deck builder) |
+| **Playable decks per print unit** | **2** |
+| **Card order** | Lock sort order (e.g. alphabetical or playtest tier); **same order** in both halves |
+
+**Why:** Matches the cheapest poker-deck price point (~$8.99/deck tier at volume) while SDCC needs **≥2 tables** without paying for two separate minimum orders.
+
+**At Comic-Con:** One manufacturer unit → split into two tuck piles (Origins #1 / #2). Order **extra** 54-card units if you want spares (see §8).
+
+### The 2 reference card slots
+
+Reserved in [`arcmate.json`](arcmate.json) as `reference_cards` (not dealt as random rules). Pick final art/layout in W2; content draft:
+
+| Slot | Working title | Purpose |
+|------|---------------|---------|
+| **R1** | **ArcMate rules** | Table reference: deal order, no-check win, compound turns (“done”), pawn limits, `+` draws — condense [QUICKREF.md](QUICKREF.md) |
+| **R2** | **Fischer Random 960** | How to set up Chess960 from **d8 + d12 + d20** ([README.md](README.md) / [RULEBOOK.md](RULEBOOK.md) §8) so demos do not need a phone |
+
+**Alternates** (swap in only if group prefers): title/branding card; bughouse one-pager; “how to teach in 3 minutes.” Keep **two** slots fixed so rule count stays **25**.
+
+### Expansion (post-SDCC)
+
+**ArcMate: _[name TBD]_** — separate future deck; not part of the Origins 27. Revisit after SDCC feedback.
 
 ---
 
@@ -46,9 +75,9 @@ Assume Comic-Con **~July 23–26, 2026**. Adjust dates when booth days are confi
 
 | Week (approx.) | Dates | Milestone |
 |----------------|-------|-----------|
-| **W0** | Now | This plan agreed; spreadsheet columns finalized; expansion name shortlist |
-| **W1** | Early June | **Glossary + rule skeleton**; fix known data bugs in `arcmate.json`; poker export spec locked |
-| **W2** | Mid June | **Card pool frozen** (candidates from ChessRuleCards); Origins vs Expansion assignment v1; cover art v1 in repo |
+| **W0** | Now | Plan agreed; **25 + 2** Origins structure; spreadsheet columns finalized |
+| **W1** | Early June | **Glossary + rule skeleton**; `reference_cards` in JSON; poker export spec locked |
+| **W2** | Mid June | **Final 25 rule cards** chosen; reference card text locked; cover art v1 in repo |
 | **W3** | Late June | **Playtest round 1** (local + async); spreadsheet scores filled; ambiguous cards rewritten |
 | **W4** | Early July | **Layout pass** for poker size; export test images; **place print order** (allow 1–2 weeks production + ship) |
 | **W5** | Mid July | **Playtest round 2** on printed proof or high-res PDF; **rulebook v1** PDF for table |
@@ -66,7 +95,7 @@ Assume Comic-Con **~July 23–26, 2026**. Adjust dates when booth days are confi
 arcmate.json  →  arcmate.tex.py (buildMagicTeX)  →  arcmate.tex  →  Makefile  →  arcmate.pdf
 ```
 
-- **32** cards in `text_cards` today (not yet 27+27).
+- **33** rule candidates in `text_cards` today → cut to **25** for Origins; **2** in `reference_cards`.
 - Layout uses **Magic-sized** dimensions in `Magic_TikZ_card` (~63×88 mm). Poker is **2.5″×3.5″** (~63.5×88.9 mm) — close, but **export for the vendor must be per-card raster/PDF at 300 DPI**, not only a multi-card letter sheet.
 
 ### Spreadsheet role (recommended)
@@ -76,10 +105,10 @@ Use the [Google Sheet](https://docs.google.com/spreadsheets/d/1FEswgLlyckdUdkqBp
 | Column group | Purpose | Lives in |
 |--------------|---------|----------|
 | **Identity** | Canonical name, ChessRuleCards link, `caption` match | Sheet + JSON (`caption`) |
-| **Selection** | In SDCC deck? Origins / Expansion / cut | Sheet (source of truth) |
+| **Selection** | In Origins 25? Cut / expansion-later | Sheet (source of truth) |
 | **Quality rubric** | Dynamic change, No legality check, Avoid 1v1 draws, Intuitive, No tokens (existing headers) | Sheet |
 | **Playtest** | Fun, clarity, combo risk, teach time | Sheet |
-| **Print** | Face file name, back deck (Origins vs Expansion), last exported hash | Sheet or CI |
+| **Print** | Face file name, slot (rule vs R1/R2), last exported hash | Sheet or CI |
 | **Rules text** | `description`, `symbol`, `origin`, `genre`, `quote` | **`arcmate.json`** (source of truth for rendering) |
 
 **Principle:** One source of truth per field type — avoid editing the same sentence in two places.
@@ -107,26 +136,25 @@ Use the [Google Sheet](https://docs.google.com/spreadsheets/d/1FEswgLlyckdUdkqBp
 
 ## 4. Physical production ([Your Playing Cards](https://yourplayingcards.com/))
 
-### Cheapest path (your direction)
+Aligns with [§1 print plan](#print-plan-one-54-card-order--two-origins-decks): **54-card poker SKU = two ArcMate: Origins decks**.
 
-- **Poker size** (2.5″ × 3.5″).
-- **54-card deck** SKU.
-- **Custom backs** per product line (Origins back vs Expansion back) may require **two separate 27-card orders** or one 54-card order with shared back — **get quote for both**; two 27-card runs might cost more than one 54-card run.
-- **Faces:** “Fully custom” faces = upload **one image per card** (typical minimum **750×1050 px @ 300 DPI**, RGB/CMYK per their FAQ; use their template when the deck builder provides it).
+- **Poker size** (2.5″ × 3.5″), fully custom faces and one **Origins** back.
+- **27 unique designs** → **54 slots** in the deck builder (each face twice).
+- Face spec: typically **750×1050 px @ 300 DPI** + bleed per vendor template.
 
 ### Engineering tasks
 
 | Task | Owner | Notes |
 |------|-------|-------|
 | Add `Poker_TikZ_card` / `buildPokerTeX` | Dev | ~6.35×8.89 cm; increase safe margins (3–5 mm) for trim |
-| Per-card PNG/PDF export | Dev | `pdftoppm` or `pdfcrop` per tikzpicture; or standalone LaTeX per card |
-| Bleed | Design | +3 mm bleed if vendor template requires it |
-| Proof order | Group | 1 deck ASAP before bulk |
-| CMYK proof | Design | Screen colors ≠ linen stock; expect one revision |
+| Per-card PNG/PDF export | Dev | **27** files; duplicate to **54-slot** upload manifest |
+| `origins_deck_order` | Dev | Locked card positions 1–27 (repeated 28–54) |
+| Bleed / CMYK | Design | Proof one 54-card unit (= 2 decks) before bulk |
+| Proof order | Group | 1×54 unit minimum |
 
 ### MTG → poker migration note
 
-Dimensions are **almost the same** as Magic (63×88 mm). The real work is **vendor file format** (54 individual uploads) and **typography at poker safe zone**, not a total redesign.
+Dimensions are **almost the same** as Magic (63×88 mm). The main work is **54 upload slots** (27×2) and typography in the safe zone, not a full redesign.
 
 ---
 
@@ -147,7 +175,7 @@ Dimensions are **almost the same** as Magic (63×88 mm). The real work is **vend
 | **Bughouse-safe** | Avoid rules that break two-board timing unless tested |
 | **No adjudication hell** | Deprioritize “No legality check” = fail in Sheet |
 | **1v1 stall** | Deprioritize rules that increase draws in single-board chess |
-| **Balance** | Mix `origin` (C/I/F), `genre` (+, T, diff, -) across each 27; note **Cylinder** White edge |
+| **Balance** | Mix `origin` (C/I/F), `genre` (+, T, diff, -) across **25** rules; note **Cylinder** White edge |
 
 **Adam & Jay-C Tier A (5/5) for Origins:** Ghost, Move twice, Insane cylinder, Micro-manager, Cylinder. **Tier B (4/5):** Capture twice, War and Peace, Summoner, Precocious pawns, Possession. **Tier C:** Teleporter → expansion or cut.
 
@@ -161,7 +189,7 @@ Dimensions are **almost the same** as Magic (63×88 mm). The real work is **vend
 ### Deliverable
 
 - [docs/PLAYTEST.md](docs/PLAYTEST.md) — session notes + inclusion tiers (started).
-- [docs/CARD_LIST.md](docs/CARD_LIST.md) + Sheet tab with final **Origins 27** and **Expansion 27**.
+- [docs/CARD_LIST.md](docs/CARD_LIST.md) + Sheet tab: **25** rule IDs + **R1/R2** locked.
 
 ---
 
@@ -200,9 +228,9 @@ Dimensions are **almost the same** as Magic (63×88 mm). The real work is **vend
 
 | Asset | Status | Notes |
 |-------|--------|-------|
-| **Card backs** | Needed | Origins vs Expansion; ChatGPT drafts → repo `art/backs/` |
+| **Card backs** | Needed | Origins back; ChatGPT drafts → repo `art/backs/` |
 | **Box / tuck** | Vendor default | Window tuck often included; add logo sticker if needed |
-| **Logo / wordmark** | TBD | ArcMate + subtitle for Origins / Expansion |
+| **Logo / wordmark** | TBD | ArcMate: Origins |
 | **Table banner** | Optional | For SDCC visibility |
 | **Rule icons** | In repo | `symbols.tex`, `graphics/` — verify legibility at poker size |
 
@@ -216,7 +244,7 @@ From [`COMIC_CON_SUBMISSION.md`](COMIC_CON_SUBMISSION.md) — operational checkl
 
 | Item | Qty / note |
 |------|------------|
-| Printed decks | ≥2 playable sets + 1 spare |
+| Printed decks | **1× 54-card print → 2 Origins decks**; add **2nd print unit** (4 decks) or **3rd** for spare if budget allows ([§1 print plan](#print-plan-one-54-card-order--two-origins-decks)) |
 | Demo boards | Chess + bughouse (or dual demo board) |
 | Clocks | 5+5 for advertised length |
 | Laminated quick-ref | 4+ copies |
@@ -230,8 +258,8 @@ From [`COMIC_CON_SUBMISSION.md`](COMIC_CON_SUBMISSION.md) — operational checkl
 
 ### P0 (before print order)
 
-- [ ] Resize / export path for **poker** + vendor upload
-- [ ] Finalize **27+27** from [PLAYTEST.md](docs/PLAYTEST.md) tiers + untested card passes
+- [ ] Resize / export path for **poker** + **54-slot** vendor manifest (27 unique × 2)
+- [ ] Finalize **Origins 25** from [PLAYTEST.md](docs/PLAYTEST.md) + untested passes; lock **R1/R2** reference text
 - [x] `GLOSSARY.md` + `RULEBOOK.md` v0.2 + `QUICKREF.md` + `docs/CARD_LIST.md` + `docs/PLAYTEST.md`
 - [x] Patch JSON: Summoner, Ten By Ten, Move Twice, War and Peace; add Possession
 - [ ] Cut/move Teleporter; distinguish Possession vs Lend Me Your Horse
@@ -258,14 +286,15 @@ From [`COMIC_CON_SUBMISSION.md`](COMIC_CON_SUBMISSION.md) — operational checkl
 
 | # | Decision | Options | Recommendation |
 |---|----------|---------|----------------|
-| 1 | **Expansion name** | Brainstorm 3–5; vote | Block print/back art until chosen |
-| 2 | **54 vs 52+2 layout** | 27+27 strict vs 26+26+jokers | 26+26+2 jokers for printer compatibility |
-| 3 | **One deck or two SKUs at con** | Single 54 vs two 27-card products | Single 54 for cost; **sell/play** as two halves |
-| 4 | **Quotes on cards** | Keep / shorten / remove for space | Shorten or drop for SDCC; keep in rulebook appendix |
-| 5 | **Sheet vs JSON authority** | Hybrid above | Hybrid |
-| 6 | **Primary demo mode** | Chess vs bughouse | Teach **chess + 1 card** first; bughouse as “advanced” |
-| 7 | **Print quantity** | | ≥3 decks + 1 proof |
-| 8 | **ChessRuleCards licensing** | | Confirm SmoothDragon repo license allows derivative deck text |
+| 1 | **Which 25 rules** | Ranked list in CARD_LIST + Sheet | Tier A/B playtest + cut Teleporter |
+| 2 | **R1 vs R2 content** | Rules ref vs 960 dice (default) | As table above; alternates only if still 2 slots |
+| 3 | **Print SKU** | **Resolved:** 54 = 2× Origins (27 unique faces × 2) | Confirm deck builder accepts duplicate mapping |
+| 4 | **Quotes on cards** | Keep / shorten / remove | Shorten or drop for SDCC |
+| 5 | **Sheet vs JSON authority** | Hybrid | Hybrid |
+| 6 | **Primary demo mode** | Chess vs bughouse | Chess + 1 card; 960 via **R2** |
+| 7 | **Print quantity** | | e.g. **2× 54-card units** → 4 decks for 2 tables + margin; 1 unit for proof |
+| 8 | **ChessRuleCards licensing** | | Confirm derivative use |
+| 9 | **Expansion** | Post-SDCC | Name TBD; not in Origins 27 |
 
 ---
 
@@ -292,4 +321,4 @@ From [`COMIC_CON_SUBMISSION.md`](COMIC_CON_SUBMISSION.md) — operational checkl
 
 ---
 
-*Last updated: 2026-05-30. Revise timeline when Comic-Con booth dates and printer turnaround are confirmed.*
+*Last updated: 2026-05-30 (Origins = 25 + 2 reference; **54-card print = 2 decks**). Revise when booth dates and printer turnaround are confirmed.*

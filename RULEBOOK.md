@@ -150,7 +150,7 @@ Symbols on the card face (♞, ♝, diagrams) illustrate piece types; full macro
 
 ## 10. Current deck (prototype)
 
-The printable deck is defined in [`arcmate.json`](arcmate.json) (32 rule cards today). Planned retail split: **ArcMate: Origins** and **expansion** (~27 cards each) from a 54-card poker print — see [PLAN.md](PLAN.md).
+The printable deck is defined in [`arcmate.json`](arcmate.json). **SDCC target:** **ArcMate: Origins** — **25** rule cards + **2** reference cards per deck; one standard **54-card** print run delivers **two** complete copies — see [PLAN.md](PLAN.md). A future expansion deck is separate.
 
 Wording on printed cards may lag this rulebook; **GLOSSARY.md** and [docs/CARD_LIST.md](docs/CARD_LIST.md) track rewrites from [`arcmate.txt`](arcmate.txt).
 

@@ -30,7 +30,7 @@ ArcMate
 
 Are materials provided or will participants need to provide their own?
 
-**Materials:** Everything is provided (printed card deck, chess/bughouse sets or demo boards, quick-reference rule sheet)
+**Materials:** Everything is provided (ArcMate: Origins card decks — **54-card print = 2 decks** per unit; chess/bughouse sets or demo boards; reference cards R1/R2 in each deck)
 
 ## Entry materials required?
 
