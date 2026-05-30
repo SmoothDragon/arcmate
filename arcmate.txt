@@ -1,0 +1,133 @@
+General
+
+We need a consistent terminology. We might not have to write this down
+formally anywhere, but we should choose a terminology and stick to
+it. For example, players don't want "take" on one card and "capture"
+on another and wonder whether or not there is a subtle difference. I
+suggest something like the following.
+
+Square - One of the initially 64 squares which make up the board.
+Adjacent - One of the up to 8 squares which share a vertex with a given square.
+Edge adjacent - One of the up to 4 squares which share an edge with a given square.
+Rank - A horizontal row of squares.
+	Ranks are numbered so that rank 1 is nearest the player whose turn it is.
+File - A vertical row of squares.
+
+Piece - Any piece, including pawn or king.
+	This is a definition we might need to write down since in chess notation "piece" excludes pawns.
+	This is a bit annoying but "man" might be considered sexist and anything else is too weird.
+Non-king piece - A piece which is not a king.
+Non-pawn piece - A piece which is not a pawn.
+Non-king non-pawn piece - A piece which is not a king or a pawn.
+Piece type - Initially one of the 6 types of chess piece.
+
+Action - A thing you can do on your turn.
+	Initially, this is a move or a capture, but this might be expanded by later rules.
+	Every action is designated to be an X move for some piece X.
+Move - An action which changes the board state and is not a capture.
+	An X move results in a square which used to contain an X now being empty.
+	Castling is a king move. Promotion is a pawn move.
+Capture - An action which results in at least one enemy piece being removed from the board.
+	Every capture is designated to be an X capture for some piece X.
+	An X-capture results in a square which used to contain an X now being empty.
+Protected - Piece Y is protected by a friendly piece X if X could capture Y if X were an enemy piece.
+	Note: We could use moves as the basis for protection instead.
+
+Other
+We should not say "take" anywhere.
+	For example,  "take a move action" should be "make a move".
+We should not say "attack" anywhere.
+Replacement or addition?
+	"X may act like Y" is an option, in addition to how X already acts.
+	"X may act only like Y" is a replacement for how X already acts.
+
+Using singular often makes things less ambiguous.
+	For example, "A knight may swap places with a bishop" is better than "Knights may swap places with bishops".
+
+Cards
+This is mainly about rephrasing the text on the cards to fit the above rules.
+
+All passant
+	A piece may capture an enemy piece on any square it moved through on the previous turn.
+Archbishop
+	A queen may only act like a bishop or a knight.
+Attack swap
+	How is this different from weapon swap?
+Bribe
+	On your turn, you may perform an enemy pawn action instead.
+Capture twice
+	This was called Take twice.
+	You may make two captures with two different pieces as one action.
+Castles are for everyone
+	A non-king X may castle with a friendly non-king Y on the same rank (or file?).
+	X jumps 2 squares towards (or over or onto) Y, and Y moves to the square which X jumped over.
+Chancellor
+	A queen may only act like a rook or a knight.
+Checkers
+	Pawns move and capture like checkers.
+	Are captures forced? They are in checkers so I think yes.
+	Are multiple captures forced? Again, I think yes.
+	Do pawns promote to a checkers queen? I think no.
+Crowned
+	A crowned piece may move or capture as a king.
+Cylinder
+	The right and left side of the board are adjacent.
+Fast pawns
+	A pawn may move any number of squares straight forwards. Draw another card.
+Insane cylinder
+	Pieces cannot move or capture backwards.
+	The top and bottom of the board are adjacent, so a piece can wrap around.
+Lend me your horse
+	Non-pawn pieces protected by a knight may act as a knight.
+Micro-manager
+	Pieces more than one rank ahead of the king may not act.
+Move swap
+	A non-king X may swap places with a friendly non-king Y if X could move to Y's square.
+Move through friendly pieces
+	Can we call this "ghost" or something?
+Move twice
+	You may make two move with two different pieces as one action.
+Night king queen
+	We need to change this name because Game of Thrones.
+	A queen may only act like a king or a knight.
+Penalty box
+	If the opponent's last action was a capture, you may move the capturing piece to any empty square as your action.
+Possession
+	If a non-pawn piece is protected by an X possessor then it can act as a non-possessor X.
+Precocious pawns
+	Pawns start the game advanced one square. Draw another card.
+Rear guard
+	After a queen move, a pawn may move to the square behind the queen if it is empty as part of the queen move.
+Summoner
+	A non-king may move to a square adjacent to a friendly summoner.
+	This is a summoner action.
+Teleporter
+	A teleporter may move to a square adjacent to a friendly pawn.
+Ten by ten.
+	The board is 10x10 and the pieces start in the central 8x8 squares.
+Trading places
+	Any X and Y may swap places. This is an X move.
+War and Peace
+	You may make a move and a capture with two different pieces as one action.
+Weapon swap
+	An X moves like an X but captures only like a Y.
+	A Y moves like a Y but captures only like an X.
+
+Do we want to replace ① and ②? At least for a starting deck? Here are
+some suggestions for the starting value for cards that have a ① or ②.
+
+Crowned 1 - Bishop (horse in Shogi)
+Crowned 2 - Rook (dragon in Shogi)
+Move swap - Bishop and Rook
+Possession - Knight
+Retreater - Queen (but I think we should lose this)
+Summoner - Bishop
+Teleporter - Bishop
+Trading places - Knight and Pawn
+	The order is important because this is a ① move
+	My suggestion is therefore to allow ② to be a pawn
+Weapon swap 1 - Knight and Bishop
+Weapon swap 2 - Rook and Queen
+
+I think we have to lose rules from Ultima and Knightmare chess, but
+not from Shogi or Chinese chess.  Lose Retreater because of Ultima.
