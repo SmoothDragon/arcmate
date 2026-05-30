@@ -1,0 +1,10 @@
+[project]
+name = "arcmate"
+version = "0.1.0"
+description = "ArcMate card deck tooling (Sheets sync, etc.)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "gspread>=6.0.0",
+    "google-auth>=2.0.0",
+]

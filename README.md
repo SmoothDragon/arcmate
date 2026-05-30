@@ -8,6 +8,16 @@ A deck of alternate chess rules. Deal one or two cards. Designed for Fischer Ran
 # How to make
 Print out PDF file to make cards.
 
+Sync card text to the group [Google Sheet](https://docs.google.com/spreadsheets/d/1FEswgLlyckdUdkqBpFjGnMcEMd2lOh_IVsh94GkxTQg/edit) (`arcmate_json` tab): see [scripts/README.md](scripts/README.md).
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh   # once per machine
+make setup                                      # uv sync → .venv
+export GOOGLE_APPLICATION_CREDENTIALS="$PWD/scripts/secrets/service-account.json"
+make sync-sheet   # JSON → Google Sheet
+make              # PDF
+```
+
 # How to play
 Deal one or two cards to modify the rules of chess/bughouse.
 The cards are designed to be a mapping from rules to rules, so the card order matters!

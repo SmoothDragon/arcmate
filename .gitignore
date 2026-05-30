@@ -222,3 +222,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Google Sheets sync (service account keys)
+scripts/secrets/
+**/service-account*.json
+**/google-credentials*.json

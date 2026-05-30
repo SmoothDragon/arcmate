@@ -125,10 +125,8 @@ Use the [Google Sheet](https://docs.google.com/spreadsheets/d/1FEswgLlyckdUdkqBp
 
 1. Group edits **inclusion, deck, scores, notes** in the Sheet.
 2. Designers edit **card text** in `arcmate.json` (or generated from Sheet export — see below).
-3. Add `scripts/sync_cards.py` (or Makefile target):
-   - **Export:** JSON → CSV (`caption`, `description`, `origin`, `genre`, `deck`, `github_path`) for Sheet import / validation.
-   - **Import:** Sheet CSV → update only allowed columns in JSON (`deck`, `include`, `notes`) — never silently overwrite `description` without review.
-4. Optional: Google Apps Script on the Sheet to pull CSV from a **raw GitHub URL** on each release tag.
+3. **JSON → Sheet:** [`scripts/sync_json_to_sheet.py`](scripts/sync_json_to_sheet.py) → tab **`arcmate_json`** via `make sync-sheet` ([uv setup](scripts/README.md)). Run after editing `arcmate.json`.
+4. Future: Sheet → JSON import for metadata only (`origins_include`, playtest scores) — never silent overwrite of `description`.
 
 **Name alignment:** Sheet uses names like “All Passant”; JSON uses `ALL PASSANT`. Maintain a **`canonical_id`** column (snake_case) in both places.
 
@@ -263,7 +261,8 @@ From [`COMIC_CON_SUBMISSION.md`](COMIC_CON_SUBMISSION.md) — operational checkl
 - [x] `GLOSSARY.md` + `RULEBOOK.md` v0.2 + `QUICKREF.md` + `docs/CARD_LIST.md` + `docs/PLAYTEST.md`
 - [x] Patch JSON: Summoner, Ten By Ten, Move Twice, War and Peace; add Possession
 - [ ] Cut/move Teleporter; distinguish Possession vs Lend Me Your Horse
-- [ ] Spreadsheet ↔ JSON **export** script; agree hybrid workflow with group
+- [x] Spreadsheet ↔ JSON **export:** `scripts/sync_json_to_sheet.py` → tab `arcmate_json`
+- [ ] Sheet → JSON metadata import (optional); agree hybrid workflow with group
 - [ ] Cover art in repo; wire backs into print export
 - [ ] Proof deck ordered
 
