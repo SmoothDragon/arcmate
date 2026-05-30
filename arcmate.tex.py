@@ -87,7 +87,8 @@ def TikZ_card(card):
     origin = '?'
     if 'origin' in card:
         origin = card['origin']
-    CARD_DATA = [card['symbol'],card['caption'], card['description'], card['quote'], origin]
+    # CARD_DATA = [card['symbol'],card['caption'], card['description'], card['quote'], origin]
+    CARD_DATA = [card['symbol'],card['caption'], card['description'], '', origin]
     # CARD_DATA = [card['stripcolor'], striptext, card['caption'], card['description'], card['bottomcaption'], card['quote']]
     CARD_TEX = itertools.chain(*itertools.zip_longest(CARD_TEMPLATE, CARD_DATA, fillvalue=''))
     # for v in CARD_TEX:
@@ -153,7 +154,7 @@ def Magic_TikZ_card(card):
     r'''}}}\end{center}
         {\textfontsize ''',
     r'''}
-        \tikz{\fill (0,0) rectangle (\cardwidth-2*\strippadding-2*\textpadding,\ruleheight);}\\
+        %\tikz{\fill (0,0) rectangle (\cardwidth-2*\strippadding-2*\textpadding,\ruleheight);}\\
         {\quotefontsize \textit{''',
     r'''}}\\[-2\baselineskip]
     };
@@ -176,7 +177,8 @@ def Magic_TikZ_card(card):
         color = 'blue!40!white'
     else:
         color = 'white'
-    CARD_DATA = [color, card['symbol'],card['caption'], card['description'], card['quote'], origin, genre]
+    # CARD_DATA = [color, card['symbol'],card['caption'], card['description'], card['quote'], origin, genre]
+    CARD_DATA = [color, card['symbol'],card['caption'], card['description'], '', origin, genre]
     # CARD_DATA = [card['stripcolor'], striptext, card['caption'], card['description'], card['bottomcaption'], card['quote']]
     CARD_TEX = itertools.chain(*itertools.zip_longest(CARD_TEMPLATE, CARD_DATA, fillvalue=''))
     # for v in CARD_TEX:

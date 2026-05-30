@@ -1,32 +1,80 @@
 { "text_cards":
   [
     {
+      "caption": "ALL PASSANT",
+      "description": "A piece may capture an enemy piece on any square it moved through on the previous turn.",
+      "origin": "C",
+      "genre": "+",
+      "quote": "You never advance without losing something en passant, and you lose it because you're paying so much attention to the new thing. ---Ninette de Valois",
+      "symbol": "\\ding{72}"
+    },
+    {
+      "caption": "BISHOP KNIGHT SWAP",
+      "description": "A \\Bishop\\ moves like a \\Bishop, but captures only like a \\Knight. A \\Knight\\ moves like a \\Knight, but captures only like a \\Bishop.",
+      "origin": "C",
+      "genre": "\\diff",
+      "quote": "The human race has one really effective weapon, and that is laughter. ---Mark Twain",
+      "symbol": "\\Bishop\\Knight"
+    },
+    {
+      "caption": "BRIBE",
+      "description": "On your turn you may perform an enemy pawn action instead. Draw an additional card.",
+      "quote": "Never underestimate the effectiveness of a straight cash bribe. ---Claud Cockburn",
+      "origin": "C",
+      "genre": "+",
+      "symbol": "\\Pawn+"
+    },
+    {
+      "caption": "CAPTURE SWAP",
+      "description": "An X moves like an X, but captures only like a Y. A Y moves like a Y, but captures only like an X.",
+      "origin": "C",
+      "genre": "\\diff",
+      "quote": "The human race has one really effective weapon, and that is laughter. ---Mark Twain",
+      "symbol": "\\KI\\KII"
+    },
+    {
+      "caption": "CAPTURE TWICE",
+      "description": "You may make two captures with two different pieces as one action.",
+      "quote": "As long as I breathe, I attack. ---Bernaud Hinault",
+      "origin": "C",
+      "genre": "+",
+      "symbol": "\\All"
+    },
+    {
       "caption": "CASTLES FOR EVERYONE",
-      "description": "\\small Any two \\NoKing\\ pieces may castle. Move piece one two squares in a rectilinear direction, and piece two on the other side",
+      "description": "\\small Any \\NoKing\\ X may castle with a friendly \\NoKing\\ Y on the same rank or file. X jumps two squares towards (or over or onto) Y and Y moves to the square X jumped over.",
       "origin": "C",
       "genre": "+",
       "quote": "I'm going to build castles from the rubble of your love. ---Freya Ridings",
       "symbol": "\\NoKing"
     },
     {
-      "caption": "10x10 BOARD",
-      "description": "The legal playing area now surrounds the board.",
+      "caption": "KING KNIGHT SWAP",
+      "description": "A \\King\\ acts only like a \\Knight. A \\Knight\\ acts only like a \\King.",
+      "origin": "C",
+      "genre": "\\diff",
+      "quote": "The human race has one really effective weapon, and that is laughter. ---Mark Twain",
+      "symbol": "\\King\\Knight"
+    },
+    {
+      "caption": "QUEEN ROOK SWAP",
+      "description": "A \\Queen\\ moves like a \\Queen, but captures only like a \\Rook. A \\Rook\\ moves like a \\Rook, but captures only like a \\Queen.",
+      "origin": "C",
+      "genre": "\\diff",
+      "quote": "The human race has one really effective weapon, and that is laughter. ---Mark Twain",
+      "symbol": "\\Queen\\Rook"
+    },
+    {
+      "caption": "TEN BY TEN",
+      "description": "The board is 10x10 and the pieces start in the central 8x8 squares. Pawns still promote at the same rank in the central 8x8 square.",
       "origin": "I",
       "genre": "T",
       "quote": "I don't have anything against walls. You know what it is? I like open spaces. ---Dion Dublin",
       "symbol": "\\inlinegraphics{10x10}"
     },
     {
-      "caption": "EXTINCTION",
-      "description": "You lose if you lose all of any piece.",
-      "origin": "I",
-      "genre": "T",
-      "quote": "Extinction is the rule. Survival is the exception. ---Carl Sagan",
-      "symbol": "\\ding{72}"
-    },
-    {
       "caption": "MICRO-MANAGER",
-      "description": "Pieces more than one rank in front of the King may not attack.",
+      "description": "Pieces more than one rank in front of the King may not capture.",
       "origin": "C",
       "genre": "T",
       "quote": "\\small I know it was your idea, but it was my idea to use your idea. --Anonymous",
@@ -34,23 +82,15 @@
     },
     {
       "caption": "WAR AND PEACE",
-      "description": "You may take a move and attack action with different pieces.",
+      "description": "You may move and capture with two different pieces as one action.",
       "origin": "C",
       "genre":"+",
       "quote": "Only the dead have seen the end of war. --Plato",
       "symbol": "\\All"
     },
     {
-      "caption": "POSSESSION",
-      "description": "Non-pawn pieces protected by a {\\KI} may also move/take like a {\\KI}.",
-      "origin": "C",
-      "genre": "+",
-      "quote": "An object in possession seldom retains the same charm that it had in pursuit. --Pliny the Elder",
-      "symbol": "\\KI"
-    },
-    {
       "caption": "KNIGHT SWAP",
-      "description": "Two friendly \\NoKing\\ pieces which are a knight move apart may swap places.",
+      "description": "Two friendly \\NoKing\\ pieces which are a knight move apart may swap places as an action.",
       "origin": "C",
       "genre": "+",
       "quote": "Don't swap horses in crossing a stream. --Abraham Lincoln",
@@ -58,40 +98,24 @@
     },
     {
       "caption": "TELEPORTER",
-      "description": "\\KI\\ may move to any open square adjacent to a friendly pawn.",
+      "description": "A \\Bishop\\ may move to any open square adjacent to a friendly pawn.",
       "origin": "C",
       "genre": "+",
       "quote": "If I could teleport, I'd probably still be late. --Anonymous",
-      "symbol": "\\KI"
-    },
-    {
-      "caption": "ATTACK SWAP",
-      "description": "\\KI\\ and \\KII\\ move the same, but attack like the other.",
-      "origin": "C",
-      "genre": "\\diff",
-      "quote": "The human race has one really effective weapon, and that is laughter. ---Mark Twain",
-      "symbol": "\\KI\\KII"
-    },
-    {
-      "caption": "ROYAL REVERSE",
-      "description": "\\KI\\ may move and take backwards like a \\Queen.",
-      "origin": "C",
-      "genre": "+",
-      "quote": "To the royal guards of this realm, we are all victims in-waiting. ---Cheshire Cat",
-      "symbol": "\\KI"
+      "symbol": "\\Bishop"
     },
     {
       "bottomcaption": "Q m,x N+K",
       "caption": "SUMMONER",
-      "description": "\\KI\\ may summon a friendly \\NoKing\\ to an adjacent square",
+      "description": "A \\Bishop\\ may move a friendly \\NoKing\\ to an adjacent square next to it as an action.",
       "quote": "My name is Mortimer Alexander and I am a licensed summoner.\" \"Darn. I'd hoped you were the pizza delivery guy. ---Jana Oliver",
       "origin": "C",
       "genre": "+",
-      "symbol": "\\KI"
+      "symbol": "\\Bishop"
     },
     {
       "caption": "CYLINDER $\\Rightarrow$",
-      "description": "The right and left side of the board are adjacent to each other. Pieces may not move left from their POV.",
+      "description": "The right and left side of the board are adjacent to each other. Pieces may not act left from their POV.",
       "origin": "C",
       "genre": "-",
       "quote": "Always choose the right path and speak the truth. ---Mahatma Gandhi",
@@ -99,11 +123,11 @@
     },
     {
       "caption": "TRADING PLACES",
-      "description": "You may swap the locations of a friendly \\KI\\ and \\KII\\ for your turn.", 
+      "description": "You may swap the locations of a friendly \\Knight\\ and \\Pawn\\. This is a \\Knight\\ move.", 
       "origin": "C",
       "genre": "+",
       "quote": "You'll all be very, very sorry. ---Louis Winthorpe",
-      "symbol": "\\KI\\KII"
+      "symbol": "\\Knight\\Pawn"
     },
     {
       "caption": "COMPLICATE",
@@ -115,7 +139,7 @@
     },
     {
       "caption": "FAST PAWNS",
-      "description": "Pawns capture normally, but may move any number of squares forward. Draw another card.",
+      "description": "A \\Pawn\\ may move any number of squares straight forward. En passant captures apply to entire path. A \\Pawn may not move more than one square to the promotion rank. Draw another card.",
       "origin": "I",
       "genre": "+",
       "quote": " In ceremonies of the horsemen, even the pawn must hold a grudge. ---Bob Dylan",
@@ -123,39 +147,23 @@
     },
     {
       "caption": "LEND ME YOUR HORSE",
-      "description": "Non-pawn pieces protected by a knight may also move/take like a knight.",
+      "description": "Non-pawn pieces protected by a knight may also act like a knight.",
       "origin": "C",
       "genre": "+",
       "quote": "\"You should know better than to mount another's war-horse\", I said with a smirk. ---Jessica Leake",
-      "symbol": "\\Knight"
+      "symbol": "\\Knight\\NoPawn"
     },
     {
       "caption": "MOVE TWICE",
-      "description": "Move two different pieces, or any take other action once.",
+      "description": "You may move two different pieces as one action.",
       "origin": "I",
       "genre": "+",
       "quote": "When someone says you can't do something, do it twice and take pictures. ---Anonymous",
       "symbol": "\\All"
     },
     {
-      "caption": "TAKE TWICE",
-      "description": "Take with two different pieces, or take any other action once.",
-      "quote": "As long as I breathe, I attack. ---Bernaud Hinault",
-      "origin": "C",
-      "genre": "+",
-      "symbol": "\\All"
-    },
-    {
-      "caption": "BRIBE",
-      "description": "On your turn you can do an action by an enemy pawn instead.",
-      "quote": "Never underestimate the effectiveness of a straight cash bribe. ---Claud Cockburn",
-      "origin": "C",
-      "genre": "+",
-      "symbol": "\\Pawn+"
-    },
-    {
       "caption": "CHECKERS",
-      "description": "Pawns move and take like checkers.",
+      "description": "Pawns move and capture like checkers. Captures (including multiple) are forced. Pawns may be promoted to any piece.",
       "quote": "These guys are playing checkers. I'm out here playing chess. When they figure it out, it's too late. ---Max Holloway",
       "genre": "\\diff",
       "origin": "C",
@@ -163,7 +171,7 @@
     },
     {
       "caption": "PRECOCIOUS PAWNS",
-      "description": "Pawns start advanced one rank. Draw another card.",
+      "description": "All pawns start advanced one rank. Draw another card.",
       "origin": "I",
       "genre": "-",
       "quote": "Precocious was not the same as smart, much less the same as wise, and the perfect opposite of informed. ---Lionel Shriver",
@@ -171,20 +179,30 @@
     },
     {
       "caption": "NIGHT KING QUEEN",
-      "description": "Queens move and take like Knight+King.",
       "description": "\\Sym\\Queen\\Move: (\\Knight+\\King)\\Move\\newline\\Sym\\Queen\\Attack: (\\Knight+\\King)\\Attack", 
+      "description": "A Queen may only act like Knight or a King.",
       "origin": "C",
       "genre":"\\diff",
       "quote": "Night's King was only a man by light of day, Old Nan would always say, but the night was his to rule. ---Brandon Stark",
       "symbol": "\\Queen"
     },
     {
-      "caption": "CROWNED",
+      "caption": "CROWNED BISHOP",
       "description": "\\Sym\\KI$\\Move^+$: \\King\\Move\\newline\\Sym\\KI$\\Attack^+$: \\King\\Attack",
+      "description": "A bishop may also act like a King.",
       "origin": "C",
       "genre":"+",
       "quote": "In the land of the blind the one-eyed man is king. ---Efren Ramirez",
-      "symbol": "\\KI"
+      "symbol": "\\Bishop"
+    },
+    {
+      "caption": "CROWNED ROOK",
+      "description": "\\Sym\\KI$\\Move^+$: \\King\\Move\\newline\\Sym\\KI$\\Attack^+$: \\King\\Attack",
+      "description": "A Rook may also act like a King.",
+      "origin": "C",
+      "genre":"+",
+      "quote": "In the land of the blind the one-eyed man is king. ---Efren Ramirez",
+      "symbol": "\\Rook"
     },
     {
       "caption": "REARGUARD",
@@ -217,14 +235,6 @@
       "genre": "+",
       "quote": "Trading is very competitive and you have to be able to handle getting your butt kicked. ---Paul Tudor Jones",
       "symbol": "\\NoKing"
-    },
-    {
-      "caption": "ALL PASSANT",
-      "description": "Any piece may capture any piece en passant.",
-      "origin": "C",
-      "genre": "+",
-      "quote": "You never advance without losing something en passant, and you lose it because you're paying so much attention to the new thing. ---Ninette de Valois",
-      "symbol": "\\ding{72}"
     },
     {
       "caption": "MOVE THROUGH FRIENDLY PIECES",
