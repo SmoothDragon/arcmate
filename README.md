@@ -1,6 +1,8 @@
 # ArcMate
 A deck of alternate chess rules. Deal one of two cards. Designed to work with Fischer Random Bughouse.
 
+**Docs:** [PLAN.md](PLAN.md) · [RULEBOOK.md](RULEBOOK.md) · [GLOSSARY.md](GLOSSARY.md) · [QUICKREF.md](QUICKREF.md) · [Card list](docs/CARD_LIST.md) · Design notes: [arcmate.txt](arcmate.txt)
+
 # How to make
 Print out PDF file to make cards.
 

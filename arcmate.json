@@ -74,7 +74,7 @@
     },
     {
       "caption": "MICRO-MANAGER",
-      "description": "Pieces more than one rank in front of the King may not capture.",
+      "description": "A piece more than one rank ahead of the \\King\\ may not act.",
       "origin": "C",
       "genre": "T",
       "quote": "\\small I know it was your idea, but it was my idea to use your idea. --Anonymous",
@@ -82,7 +82,7 @@
     },
     {
       "caption": "WAR AND PEACE",
-      "description": "You may move and capture with two different pieces as one action.",
+      "description": "You may make one move and one capture with two different pieces as one action.",
       "origin": "C",
       "genre":"+",
       "quote": "Only the dead have seen the end of war. --Plato",
@@ -147,7 +147,7 @@
     },
     {
       "caption": "LEND ME YOUR HORSE",
-      "description": "Non-pawn pieces protected by a knight may also act like a knight.",
+      "description": "A non-pawn piece protected by a \\Knight\\ may also act like a \\Knight.",
       "origin": "C",
       "genre": "+",
       "quote": "\"You should know better than to mount another's war-horse\", I said with a smirk. ---Jessica Leake",
@@ -155,7 +155,7 @@
     },
     {
       "caption": "MOVE TWICE",
-      "description": "You may move two different pieces as one action.",
+      "description": "You may make two moves with two different pieces as one action.",
       "origin": "I",
       "genre": "+",
       "quote": "When someone says you can't do something, do it twice and take pictures. ---Anonymous",
@@ -163,7 +163,7 @@
     },
     {
       "caption": "CHECKERS",
-      "description": "Pawns move and capture like checkers. Captures (including multiple) are forced. Pawns may be promoted to any piece.",
+      "description": "A \\Pawn\\ moves and captures like a checkers man. Captures (including multiple) are forced. A \\Pawn\\ promotes as in chess, not as a checkers king.",
       "quote": "These guys are playing checkers. I'm out here playing chess. When they figure it out, it's too late. ---Max Holloway",
       "genre": "\\diff",
       "origin": "C",
@@ -178,18 +178,16 @@
       "symbol": "\\Pawn+"
     },
     {
-      "caption": "NIGHT KING QUEEN",
-      "description": "\\Sym\\Queen\\Move: (\\Knight+\\King)\\Move\\newline\\Sym\\Queen\\Attack: (\\Knight+\\King)\\Attack", 
-      "description": "A Queen may only act like Knight or a King.",
+      "caption": "QUEEN KING KNIGHT",
+      "description": "A \\Queen\\ may only act like a \\Knight\\ or a \\King.",
       "origin": "C",
       "genre":"\\diff",
-      "quote": "Night's King was only a man by light of day, Old Nan would always say, but the night was his to rule. ---Brandon Stark",
+      "quote": "The queen is the most powerful piece on the board --- if she is not distracted. ---Anonymous",
       "symbol": "\\Queen"
     },
     {
       "caption": "CROWNED BISHOP",
-      "description": "\\Sym\\KI$\\Move^+$: \\King\\Move\\newline\\Sym\\KI$\\Attack^+$: \\King\\Attack",
-      "description": "A bishop may also act like a King.",
+      "description": "A \\Bishop\\ may also act like a \\King.",
       "origin": "C",
       "genre":"+",
       "quote": "In the land of the blind the one-eyed man is king. ---Efren Ramirez",
@@ -197,8 +195,7 @@
     },
     {
       "caption": "CROWNED ROOK",
-      "description": "\\Sym\\KI$\\Move^+$: \\King\\Move\\newline\\Sym\\KI$\\Attack^+$: \\King\\Attack",
-      "description": "A Rook may also act like a King.",
+      "description": "A \\Rook\\ may also act like a \\King.",
       "origin": "C",
       "genre":"+",
       "quote": "In the land of the blind the one-eyed man is king. ---Efren Ramirez",
@@ -206,7 +203,7 @@
     },
     {
       "caption": "REARGUARD",
-      "description": "Whenever a Queen moves (not drop), it may summon a pawn to the square behind it.",
+      "description": "After a \\Queen\\ move, a \\Pawn\\ may move to the empty square behind the queen as part of that move.",
       "origin": "C",
       "genre":"+",
       "quote": "If you think you're going to be a backup, you're going to be a backup. ---Nick Foles",
@@ -214,7 +211,7 @@
     },
     {
       "caption": "INSANE CYLINDER",
-      "description": "Pieces do not move/take backwards. The top and bottom of the board are considered adjacent.",
+      "description": "A piece may not move or capture backwards. The top and bottom of the board are edge-adjacent.",
       "origin": "I",
       "genre": "-",
       "quote": "There's a fine line between genius and insanity. I have erased this line. ---Oscar Levant",
@@ -222,7 +219,7 @@
     },
     {
       "caption": "CYLINDER",
-      "description": "Pieces may move as if the right and left side of the board are adjacent to each other.",
+      "description": "The right and left sides of the board are edge-adjacent.",
       "origin": "I",
       "genre": "+",
       "quote": "\\tiny Everything in nature takes its form from the sphere, the cone and the cylinder. ---Paul Cezanne",
@@ -230,7 +227,7 @@
     },
     {
       "caption": "MOVE SWAP",
-      "description": "Two friendly {\\Sym\\NoKing} may swap places if one can move to or take the other.",
+      "description": "A \\NoKing\\ X may swap places with a friendly \\NoKing\\ Y if X could move to Y's square.",
       "origin": "C",
       "genre": "+",
       "quote": "Trading is very competitive and you have to be able to handle getting your butt kicked. ---Paul Tudor Jones",
@@ -246,7 +243,7 @@
     },
     {
       "caption": "ARCHBISHOP",
-      "description": "Queens move and take like Bishop+Knight. Fairy chess Archbishop.",
+      "description": "A \\Queen\\ may only act like a \\Bishop\\ or a \\Knight.",
       "origin": "F",
       "genre": "\\diff",
       "quote": "If people want a sense of purpose they should get it from their archbishop. They should certainly not get it from their politicians. ---Harold MacMillan",
@@ -254,7 +251,7 @@
     },
     {
       "caption": "CHANCELLOR",
-      "description": "Queens move and take like Rook+Knight. Fairy chess Chancellor.",
+      "description": "A \\Queen\\ may only act like a \\Rook\\ or a \\Knight.",
       "origin": "F",
       "genre": "\\diff",
       "quote": "When I'm stirring a saucepan, I don't say to myself, 'Now the chancellor is stirring a saucepan'. ---Angela Merkel",

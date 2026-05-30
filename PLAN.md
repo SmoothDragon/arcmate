@@ -163,13 +163,14 @@ Dimensions are **almost the same** as Magic (63×88 mm). The real work is **vend
 
 ## 6. Rules, terminology, ambiguity
 
-### Documents to add
+### Documents
 
 | Doc | Purpose |
 |-----|---------|
-| `GLOSSARY.md` | Single definitions: *orthodox piece*, *acts*, *move vs capture*, *drop*, *genre* badges (C/I/F, +/T/diff) |
-| `RULEBOOK.md` → PDF | Comic-Con teach + home play; include Fischer Random dice procedure from README |
-| `QUICKREF.md` | One page: deal procedure, stacking, “+” draw rule, bughouse pointer |
+| [`GLOSSARY.md`](GLOSSARY.md) | Definitions from [`arcmate.txt`](arcmate.txt); style rules (no take/attack) |
+| [`RULEBOOK.md`](RULEBOOK.md) | Full rules draft v0.1; Fischer Random; bughouse; open questions |
+| [`QUICKREF.md`](QUICKREF.md) | One-page teach sheet |
+| [`docs/CARD_LIST.md`](docs/CARD_LIST.md) | Per-card status vs `arcmate.txt`; JSON fix queue |
 
 ### Standardize terminology (decisions)
 
@@ -225,7 +226,7 @@ From [`COMIC_CON_SUBMISSION.md`](COMIC_CON_SUBMISSION.md) — operational checkl
 
 - [ ] Resize / export path for **poker** + vendor upload
 - [ ] Finalize **27+27** list; trim `arcmate.json` to match
-- [ ] `GLOSSARY.md` + `RULEBOOK.md` v1
+- [x] `GLOSSARY.md` + `RULEBOOK.md` v0.1 + `QUICKREF.md` + `docs/CARD_LIST.md` (draft; align JSON to glossary)
 - [ ] Spreadsheet ↔ JSON **export** script; agree hybrid workflow with group
 - [ ] Cover art in repo; wire backs into print export
 - [ ] Proof deck ordered
@@ -233,9 +234,9 @@ From [`COMIC_CON_SUBMISSION.md`](COMIC_CON_SUBMISSION.md) — operational checkl
 ### P1 (before SDCC)
 
 - [ ] Playtest round 2 on physical cards
-- [ ] `QUICKREF` printed
+- [ ] `QUICKREF` printed (laminated for table)
 - [ ] Name expansion; update JSON metadata (`deck`: `origins` | `expansion`)
-- [ ] README points to PLAN, rulebook, Sheet
+- [x] README points to PLAN, rulebook, glossary, card list, `arcmate.txt`
 
 ### P2 (nice to have)
 
