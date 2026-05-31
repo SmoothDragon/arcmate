@@ -59,7 +59,7 @@ Reserved in [`arcmate.json`](arcmate.json) as `reference_cards` (not dealt as ra
 | Slot | Working title | Purpose |
 |------|---------------|---------|
 | **R1** | **ArcMate rules** | Table reference: deal order, no-check win, compound turns (“done”), pawn limits, `+` draws — condense [QUICKREF.md](QUICKREF.md) |
-| **R2** | **Fischer Random 960** | How to set up Chess960 from **d8 + d12 + d20** ([README.md](README.md) / [RULEBOOK.md](RULEBOOK.md) §8) so demos do not need a phone |
+| **R2** | **Fischer Random 960** | Dice algorithm + example **(6, 9, 16)** — [docs/FISCHER_RANDOM_960.md](docs/FISCHER_RANDOM_960.md) with step diagrams |
 
 **Alternates** (swap in only if group prefers): title/branding card; bughouse one-pager; “how to teach in 3 minutes.” Keep **two** slots fixed so rule count stays **25**.
 

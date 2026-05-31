@@ -119,16 +119,45 @@ Test bughouse interactions in playtest before SDCC; note problems in the [spread
 
 ## 8. Fischer Random setup (dice)
 
-Optional start; from README. Place pieces on rank 1 (your back rank) as rolled:
+Optional Chess960-style start using **d8**, **d12**, and **d20**. Full rules and subtraction method: **[docs/FISCHER_RANDOM_960.md](docs/FISCHER_RANDOM_960.md)**. The printed deck includes reference card **R2 — FISCHER RANDOM 960**.
 
-| Step | Roll | Placement |
-|------|------|-------------|
-| Queen | **d8** | Queen on file 1–8 (roll value) |
-| Bishops | **d12** | First bishop: roll % 4 → 1–4 on non-queen-color squares; second bishop: roll % 3 → 1–3 on remaining queen-color squares |
-| Knights | **d20** | First knight: roll % 5 on five remaining squares; second knight: roll % 4 on four remaining |
-| King and rooks | — | King on the middle square of the last three; rooks on the other two |
+Set up **White’s rank 1** (files **1–8**, *a* = 1), then **mirror** for Black on rank 8.
 
-Then mirror or place black symmetrically as you would for Chess960.
+### Example: d8 = 6, d12 = 9, d20 = 16
+
+Rolls **(6, 9, 16)** — reuse the same d12 and d20 for both bishops and both knights.
+
+| Step | What to do |
+|------|------------|
+| 1 | Empty rank; squares **1–8** (for d8); files **a–h** below |
+| 2 | **d8 = 6** → Queen on **f** (light square) |
+| 3 | Label **dark** empties **1–4** only |
+| 4 | **d12 = 9** → subtract 4s → **1** → Bishop on dark **1** |
+| 5 | Label **light** empties **1–3** |
+| 6 | **d12 = 9** again → subtract 3s → **3** → Bishop on light **3** |
+| 7 | Label five empty squares **1–5** |
+| 8 | **d20 = 16** → subtract 5s → **1** → Knight on **1** |
+| 9 | Label four empty squares **1–4** |
+| 10 | **d20 = 16** again → subtract 4s → **4** → Knight on **4** |
+| 11 | Three left → **K** on **2**, **R** on **1** and **3** |
+
+**Result (rank 1, a–h):** ♗ ♘ ♖ ♔ ♖ ♕ ♘ ♗
+
+#### Step-by-step diagrams (White rank 1)
+
+1. ![Empty rank](docs/fischer960/step-01-empty.svg)  
+2. ![Queen](docs/fischer960/step-02-queen.svg)  
+3. ![Dark labels 1–4](docs/fischer960/step-03-dark-labels.svg)  
+4. ![First bishop](docs/fischer960/step-04-bishop1.svg)  
+5. ![Light labels 1–3](docs/fischer960/step-05-light-labels.svg)  
+6. ![Second bishop](docs/fischer960/step-06-bishop2.svg)  
+7. ![Five labels](docs/fischer960/step-07-five-labels.svg)  
+8. ![First knight](docs/fischer960/step-08-knight1.svg)  
+9. ![Four labels](docs/fischer960/step-09-four-labels.svg)  
+10. ![Second knight](docs/fischer960/step-10-knight2.svg)  
+11. ![Final rank](docs/fischer960/step-11-final.svg)  
+
+Black mirrors this back rank onto rank 8.
 
 ---
 

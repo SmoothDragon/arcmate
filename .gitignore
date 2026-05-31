@@ -224,6 +224,9 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Google Sheets sync (service account keys)
+docs/fischer960/commons-cache/
+docs/fischer960/export/
+
 scripts/secrets/
 **/service-account*.json
 **/google-credentials*.json

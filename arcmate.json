@@ -281,7 +281,7 @@
     {
       "slot": "R2",
       "caption": "FISCHER RANDOM 960",
-      "description": "On rank 1: \\textbf{d8} = queen file (1--8). \\textbf{d12}: first bishop on non-queen color square (roll \\% 4, use 1--4); second bishop on queen color (roll \\% 3, use 1--3). \\textbf{d20}: first knight (roll \\% 5); second knight (roll \\% 4). Place king in center of last three squares; rooks on the other two. Mirror for Black.",
+      "description": "Rank 1, files 1--8. \\textbf{d8}: Queen on roll (light square). \\textbf{d12} (twice): subtract 4s $\\rightarrow$ 1--4 on dark empties; subtract 3s $\\rightarrow$ 1--3 on light empties (swap if Q on dark). \\textbf{d20} (twice): subtract 5s $\\rightarrow$ 1--5; subtract 4s $\\rightarrow$ 1--4. Last three: K on 2, R on 1 and 3. Example: 6, 9, 16 $\\rightarrow$ B N R K R Q N B. Mirror Black.",
       "origin": "R",
       "genre": "REF",
       "quote": "",

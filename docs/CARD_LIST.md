@@ -122,7 +122,7 @@ From `arcmate.txt` — use concrete types on printed cards, not ①②:
 | Slot | caption | Status |
 |------|---------|--------|
 | **R1** | ARCMATE RULES | draft in JSON |
-| **R2** | FISCHER RANDOM 960 | draft in JSON |
+| **R2** | FISCHER RANDOM 960 | done — algorithm + example 6,9,16; see [FISCHER_RANDOM_960.md](FISCHER_RANDOM_960.md) |
 
 Not shuffled into the rule deck; kept aside or boxed as reference.
 

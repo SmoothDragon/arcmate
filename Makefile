@@ -1,4 +1,4 @@
-.PHONY: main clean sync-sheet setup FORCE
+.PHONY: main clean sync-sheet setup fischer960-diagrams FORCE
 
 TEXTMP=.textmp
 GRAPHICS= $(wildcard graphics/*.pdf)
@@ -21,6 +21,9 @@ arcmate.tex: arcmate.tex.py arcmate.json symbols.tex $(GRAPHICS)
 
 setup:
 	./scripts/setup_env.sh
+
+fischer960-diagrams:
+	cd scripts && python3 gen_fischer960_diagrams.py
 
 sync-sheet:
 	$(UV) run python scripts/sync_json_to_sheet.py
